@@ -7,7 +7,7 @@ export default async function Header({ lang }: { lang: Locale }) {
   const { navigation } = await getDictionary(lang)
 
   return (
-    <header className='py-6'>
+    <header className="bg-primary-500 h-12 flex-center">
       <nav className='container flex items-center justify-between'>
         <ul className='flex gap-x-8'>
           <li>

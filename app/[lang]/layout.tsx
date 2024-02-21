@@ -1,10 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { supportedLanguages } from '@/i18n.config'
-import Header from './components/header'
 import { Locale } from '@/constants/languages'
 import { Roboto } from 'next/font/google'
 import {  Noto_Sans_Arabic  } from 'next/font/google'
+import Image from 'next/image'
 
 // Handle the font family
 const roboto = Roboto({ 
@@ -43,7 +43,6 @@ export default function RootLayout({
         dir={params.lang.toString() === 'ar' ? 'rtl' : 'ltr'}
     >
       <body className={params.lang.toString() ==='ar' ? noto_arabic.className : roboto.className}>
-        <Header lang={params.lang} />
         <main>{children}</main>
       </body>
     </html>
