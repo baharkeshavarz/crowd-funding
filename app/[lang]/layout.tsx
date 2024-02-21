@@ -2,14 +2,28 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { supportedLanguages } from '@/i18n.config'
 import Header from './components/header'
-
-import { Inter } from 'next/font/google'
 import { Locale } from '@/constants/languages'
-const inter = Inter({ subsets: ['latin'] })
+import { Roboto } from 'next/font/google'
+import {  Noto_Sans_Arabic  } from 'next/font/google'
+
+// Handle the font family
+const roboto = Roboto({ 
+       subsets: ['cyrillic'],
+       weight: ["400", "500"],
+       variable: "--font-roboto",
+    })
+const noto_arabic = Noto_Sans_Arabic({
+   subsets: ['arabic'],
+   weight: ["300", "400", "500", "600", "700"],
+   variable: "--font-notoSansArabic",
+  })
 
 export const metadata: Metadata = {
   title: 'Crowd Funding App',
-  description: 'Crowd Funding App'
+  description: 'Crowd Funding App',
+  icons: {
+    icon: "/assets/images/site-logo.svg",
+  },
 }
 
 export async function generateStaticParams() {
@@ -25,10 +39,10 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang={params.lang.toString()}
-      dir={params.lang.toString() === 'ar' ? 'rtl' : 'ltr'}
+        lang={params.lang.toString()}
+        dir={params.lang.toString() === 'ar' ? 'rtl' : 'ltr'}
     >
-      <body className={inter.className}>
+      <body className={params.lang.toString() ==='ar' ? noto_arabic.className : roboto.className}>
         <Header lang={params.lang} />
         <main>{children}</main>
       </body>

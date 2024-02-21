@@ -18,7 +18,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          500: "#FF7000",
+          500: "#674df0",
           100: "#FFF1E6",
         },
         dark: {
@@ -39,8 +39,8 @@ const config: Config = {
         "accent-blue": "#1DA1F2",
       },
       fontFamily: {
-        inter: ["var(--font-inter)"],
-        spaceGrotesk: "[var(--font-spaceGrotesk)]",
+        roboto: ["var(--font-roboto)"],
+        notoSansArabic: "[var(--font-notoSansArabic)]",
       },
       boxShadow: {
         "light-100":
