@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { humanReadableLanguage, i18n, supportedLanguages } from '@/i18n.config'
+import { humanReadableLanguage, supportedLanguages } from '@/i18n.config'
 
 export default function LocaleSwitcher() {
   const pathName = usePathname()
