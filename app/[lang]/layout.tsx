@@ -1,4 +1,4 @@
-import './globals.css'
+import '../../styles/globals.css'
 import type { Metadata } from 'next'
 import { supportedLanguages } from '@/i18n.config'
 import Header from './components/header'
