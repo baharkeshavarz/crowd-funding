@@ -4,16 +4,10 @@
 
 @layer utilities {
   /* ---------------- */
-     /* background color */
+  /* background color */
   /* ---------------- */
 
-
-
-
-
-
-
- .background-light850_dark100 {
+  .background-light850_dark100 {
     @apply bg-light-850 dark:bg-dark-100;
   }
 
@@ -26,7 +20,7 @@
   }
 
   .background-light800_darkgradient {
-    @apply bg-light-800 dark:dark-gradient;
+    @apply dark:dark-gradient bg-light-800;
   }
 
   .background-light800_dark400 {
@@ -50,7 +44,7 @@
   }
 
   /* ---------------- */
-     /* text color */
+  /* text color */
   /* ---------------- */
   .text-dark100_light900 {
     @apply text-dark-100 dark:text-light-900 !important;
@@ -113,7 +107,7 @@
   }
 
   /* ---------------- */
-     /* headings */
+  /* headings */
   /* ---------------- */
   .h1-bold {
     @apply text-[30px] font-bold leading-[42px] tracking-tighter;
@@ -136,7 +130,7 @@
   }
 
   /* ---------------- */
-    /* fonts */
+  /* fonts */
   /* ---------------- */
   .base-medium {
     @apply text-[18px] font-medium leading-[25.2px];
@@ -203,7 +197,7 @@
   }
 
   /* ---------------- */
-   /* shadows */
+  /* shadows */
   /* ---------------- */
   .shadow-light100_dark100 {
     @apply shadow-light-100 dark:shadow-dark-100;
@@ -214,7 +208,7 @@
   }
 
   /* ---------------- */
-    /* gradient */
+  /* gradient */
   /* ---------------- */
   .primary-gradient {
     background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
