@@ -10,19 +10,19 @@ body {
 
 @layer utilities {
   .flex-center {
-    @apply flex justify-center items-center;
+    @apply flex items-center justify-center;
   }
 
   .flex-between {
-    @apply flex justify-between items-center;
+    @apply flex items-center justify-between;
   }
 
   .flex-start {
-    @apply flex justify-start items-center;
+    @apply flex items-center justify-start;
   }
 
   .card-wrapper {
-    @apply bg-light-900 dark:dark-gradient shadow-light-100;
+    @apply dark:dark-gradient bg-light-900 shadow-light-100;
   }
 
   .btn {
@@ -48,8 +48,8 @@ body {
       rgba(19, 22, 28, 0.7) 100%
     );
   }
- .no-focus {
-    @apply ring-0  border-transparent focus:ring-offset-0 focus:ring-0 !important;
+  .no-focus {
+    @apply border-transparent  ring-0 focus:ring-0 focus:ring-offset-0 !important;
   }
 }
 
