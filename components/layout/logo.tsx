@@ -2,14 +2,15 @@ import Image from "next/image"
 import React from "react"
 
 interface LogoProps {
-  classes: string
+  name: string
+  classes?: string
 }
 
-const logo = ({ classes }: LogoProps) => {
+const logo = ({ name = "logo.png", classes }: LogoProps) => {
   return (
     <div className={classes}>
       <Image
-        src="/assets/images/logo.png"
+        src={`/assets/images/${name}`}
         alt="invest"
         width={100}
         height={100}

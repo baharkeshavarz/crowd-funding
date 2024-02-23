@@ -1,10 +1,10 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   darkMode: "class",
   theme: {
@@ -12,21 +12,21 @@ const config: Config = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
-      },
+        "2xl": "1400px"
+      }
     },
     extend: {
       colors: {
         primary: {
           500: "#674df0",
-          100: "#FFF1E6",
+          100: "#FFF1E6"
         },
         dark: {
           100: "#000000",
           200: "#0F1117",
           300: "#151821",
           400: "#212734",
-          500: "#101012",
+          500: "#101012"
         },
         light: {
           900: "#FFFFFF",
@@ -34,13 +34,13 @@ const config: Config = {
           850: "#FDFDFD",
           700: "#DCE3F1",
           500: "#7B8EC8",
-          400: "#858EAD",
+          400: "#858EAD"
         },
-        "accent-blue": "#1DA1F2",
+        "accent-blue": "#1DA1F2"
       },
       fontFamily: {
         roboto: ["var(--font-roboto)"],
-        notoSansArabic: "[var(--font-notoSansArabic)]",
+        notoSansArabic: "[var(--font-notoSansArabic)]"
       },
       boxShadow: {
         "light-100":
@@ -48,12 +48,11 @@ const config: Config = {
         "light-200": "10px 10px 20px 0px rgba(218, 213, 213, 0.01)",
         "light-300": "-10px 10px 20px 0px rgba(218, 213, 213, 0.0)",
         "dark-100": "0px 2px 10px 0px rgba(46, 52, 56, 0.10)",
-        "dark-200": "2px 0px 20px 0px rgba(39, 36, 36, 0.04)",
-      },
+        "dark-200": "2px 0px 20px 0px rgba(39, 36, 36, 0.04)"
+      }
     },
     backgroundImage: {
-      "auth-dark": "url('/assets/images/auth-dark.png)",
-      "auth-light": "url('/assets/images/auth-light.png)",
+      "footer-back": "url('/assets/images/image-10.jpg)"
     },
     screens: {
       sm: "576px",
@@ -62,24 +61,24 @@ const config: Config = {
       // => @media (min-width: 768px) { ... }
       lg: "992px",
       // => @media (min-width: 992px) { ... }
-      xl: "1200px",
+      xl: "1200px"
       // => @media (min-width: 1200px) { ... }
     },
     keyframes: {
       "accordion-down": {
         from: { height: "0" },
-        to: { height: "var(--radix-accordion-content-height)" },
+        to: { height: "var(--radix-accordion-content-height)" }
       },
       "accordion-up": {
         from: { height: "var(--radix-accordion-content-height)" },
-        to: { height: "0" },
-      },
+        to: { height: "0" }
+      }
     },
     animation: {
       "accordion-down": "accordion-down 0.2s ease-out",
-      "accordion-up": "accordion-up 0.2s ease-out",
-    },
+      "accordion-up": "accordion-up 0.2s ease-out"
+    }
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
-};
-export default config;
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")]
+}
+export default config

@@ -112,7 +112,7 @@ const NavBar = ({ lang }: NavBarProps) => {
           className="flex items-center pl-4"
           onClick={() => resetSelectItem()}
         >
-          <Logo classes="flex-center relative h-24 w-32" />
+          <Logo name="logo.png" classes="flex-center relative h-24 w-32" />
         </Link>
 
         <div className="hidden text-xl font-semibold sm:flex">
