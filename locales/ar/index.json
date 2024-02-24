@@ -1,7 +1,9 @@
 {
   "navigation": {
     "home": "خانه",
-    "about": "درباره ما"
+    "about": "درباره ما",
+    "events": "رویدادها",
+    "contact": "تماس با ما"
   },
   "page": {
     "home": {

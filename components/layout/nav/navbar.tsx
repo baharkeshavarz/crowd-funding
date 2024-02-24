@@ -3,15 +3,20 @@
 import { useEffect, useState } from "react";
 import {
   Navbar,
-  MobileNav,
-  Typography,
+  Collapse ,
   Button,
   IconButton,
 } from "@material-tailwind/react";
-import Logo from "./logo";
-import LocaleSwitcher from "./locale-switcher";
+import Logo from "../logo";
+import LocaleSwitcher from "../locale-switcher";
+import { Locale } from "@/i18n.config";
+import NavList from "./navlist";
  
-const StickyNavbar = () => {
+interface NavbarProps {
+  lang: Locale;
+}
+
+const NavBar = ( {lang }: NavbarProps) => {
   const [openNav, setOpenNav] = useState(false);
  
   useEffect(() => {
@@ -21,57 +26,57 @@ const StickyNavbar = () => {
     );
   }, []);
  
-  const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:gap-6 lg:mx-3 w-full">
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="">
-          Home
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Account
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Blocks
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Docs
-        </a>
-      </Typography>
-    </ul>
-  );
+  // const navList = (
+  //   <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:gap-6 lg:mx-3 w-full">
+  //     <Typography
+  //       as="li"
+  //       variant="small"
+  //       color="blue-gray"
+  //       className="p-1 font-normal"
+  //     >
+  //       <a href="#" className="">
+  //         Home
+  //       </a>
+  //     </Typography>
+  //     <Typography
+  //       as="li"
+  //       variant="small"
+  //       color="blue-gray"
+  //       className="p-1 font-normal"
+  //     >
+  //       <a href="#" className="flex items-center">
+  //         Account
+  //       </a>
+  //     </Typography>
+  //     <Typography
+  //       as="li"
+  //       variant="small"
+  //       color="blue-gray"
+  //       className="p-1 font-normal"
+  //     >
+  //       <a href="#" className="flex items-center">
+  //         Blocks
+  //       </a>
+  //     </Typography>
+  //     <Typography
+  //       as="li"
+  //       variant="small"
+  //       color="blue-gray"
+  //       className="p-1 font-normal"
+  //     >
+  //       <a href="#" className="flex items-center">
+  //         Docs
+  //       </a>
+  //     </Typography>
+  //   </ul>
+  // );
  
   return (
       <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
         <div className="flex-between items-center max-w-6xl mx-auto text-blue-gray-900">
           <Logo name="logo.png"/>
           <div className="mr-4 hidden lg:block lg:flex-start">
-            {navList}
+            <NavList lang={lang} />
             <div className="flex-center gap-x-2 mr-1">
               <Button
                 variant="filled"
@@ -128,10 +133,10 @@ const StickyNavbar = () => {
               )}
           </IconButton>
         </div>
-        <MobileNav open={openNav}>     
+        <Collapse open={openNav}>     
         <div className="flex-start flex-col gap-1">
           <LocaleSwitcher classes="w-full mt-2"/>
-          {navList}
+          <NavList lang={lang} />
           <div className="flex-center w-full gap-1">
              <Button fullWidth variant="filled" size="sm">
               <span>Log In</span>
@@ -141,9 +146,9 @@ const StickyNavbar = () => {
              </Button>
           </div>
          </div>
-        </MobileNav>
+        </Collapse >
       </Navbar>
   );
 }
 
-export default StickyNavbar;
+export default NavBar;

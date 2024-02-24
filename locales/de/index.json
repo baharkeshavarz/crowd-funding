@@ -1,7 +1,9 @@
 {
   "navigation": {
     "home": "Startseite",
-    "about": "Über"
+    "events": "Events",
+    "about": "Über",
+    "contact": "Contact Us"
   },
   "page": {
     "home": {
