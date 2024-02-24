@@ -6,7 +6,7 @@ interface LogoProps {
   classes?: string
 }
 
-const logo = ({ name = "logo.png", classes }: LogoProps) => {
+const Logo = ({ name = "logo.png", classes }: LogoProps) => {
   return (
     <div className={classes}>
       <Image
@@ -20,4 +20,4 @@ const logo = ({ name = "logo.png", classes }: LogoProps) => {
   )
 }
 
-export default logo
+export default Logo
