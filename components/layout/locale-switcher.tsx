@@ -21,7 +21,7 @@ const LocaleSwitcher = ({ classes }: LocaleSwitcherProps) => {
   }
 
   return (
-     <div className={classes}>
+     <div className={`mx-1 ${classes}`}>
          <Select label="Language">
             {supportedLanguages.map(locale => 
              <Option

@@ -22,7 +22,7 @@ const StickyNavbar = () => {
   }, []);
  
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:gap-6 w-full">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:gap-6 lg:mx-3 w-full">
       <Typography
         as="li"
         variant="small"

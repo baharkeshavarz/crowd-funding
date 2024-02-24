@@ -6,14 +6,13 @@ interface LogoProps {
   classes?: string
 }
 
-const Logo = ({ name = "logo.png", classes }: LogoProps) => {
+const Logo = ({ name = "logo.png", classes="w-24 h-12" }: LogoProps) => {
   return (
-    <div className={classes}>
+    <div className={`relative ${classes}`}>
       <Image
         src={`/assets/images/${name}`}
-        alt="invest"
-        width={100}
-        height={100}
+        alt=""
+        fill={true}
         className="object-contain"
       />
     </div>

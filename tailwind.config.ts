@@ -27,7 +27,7 @@ const config: Config = withMT({
           200: "#0F1117",
           300: "#151821",
           400: "#212734",
-          500: "#101012"
+          500: "#1b1f2e"
         },
         light: {
           900: "#FFFFFF",
@@ -53,7 +53,7 @@ const config: Config = withMT({
       }
     },
     backgroundImage: {
-      "footer-back": "url('/assets/images/image-10.jpg)"
+      "footer-back": "url('/assets/images/footer-bg.png)"
     },
     screens: {
       sm: "576px",
