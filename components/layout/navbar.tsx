@@ -9,6 +9,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import Logo from "./logo";
+import LocaleSwitcher from "./locale-switcher";
  
 const StickyNavbar = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -21,15 +22,15 @@ const StickyNavbar = () => {
   }, []);
  
   const navList = (
-    <ul className="mt-2 mb-4 flex-center flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:gap-6 w-full">
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Pages
+        <a href="#" className="">
+          Home
         </a>
       </Typography>
       <Typography
@@ -67,29 +68,31 @@ const StickyNavbar = () => {
  
   return (
       <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
-        <div className="flex items-center justify-between text-blue-gray-900">
+        <div className="flex-between items-center max-w-6xl mx-auto text-blue-gray-900">
           <Logo name="logo.png"/>
-          <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
-            <div className="flex items-center gap-x-1">
+          <div className="mr-4 hidden lg:block lg:flex-start">
+            {navList}
+            <div className="flex-center gap-x-2 mr-1">
               <Button
                 variant="filled"
                 size="sm"
-                className="hidden lg:inline-block"
+                className="hidden lg:inline-block w-24"
               >
                 <span>Log In</span>
               </Button>
               <Button
                 variant="filled"
                 size="sm"
-                className="hidden lg:inline-block"
+                className="hidden lg:inline-block w-24"
               >
                 <span>Sign in</span>
               </Button>
             </div>
-            <IconButton
+            <LocaleSwitcher/>
+          </div>
+          <IconButton
               variant="text"
-              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+              className="h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
               ripple={false}
               onClick={() => setOpenNav(!openNav)}
             >
@@ -123,19 +126,21 @@ const StickyNavbar = () => {
                   />
                 </svg>
               )}
-            </IconButton>
-          </div>
+          </IconButton>
         </div>
-        <MobileNav open={openNav}>
+        <MobileNav open={openNav}>     
+        <div className="flex-start flex-col gap-1">
+          <LocaleSwitcher classes="w-full mt-2"/>
           {navList}
-          <div className="flex items-center gap-x-1">
-            <Button fullWidth variant="filled" size="sm">
+          <div className="flex-center w-full gap-1">
+             <Button fullWidth variant="filled" size="sm">
               <span>Log In</span>
-            </Button>
-            <Button fullWidth variant="outlined" size="sm">
-              <span>Sign in</span>
-            </Button>
+             </Button>
+             <Button fullWidth variant="outlined" size="sm">
+               <span>Sign in</span>
+             </Button>
           </div>
+         </div>
         </MobileNav>
       </Navbar>
   );

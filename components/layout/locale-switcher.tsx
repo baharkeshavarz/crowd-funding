@@ -1,35 +1,39 @@
 "use client"
 
-import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { humanReadableLanguage, supportedLanguages } from "@/i18n.config"
+import { Select, Option } from "@material-tailwind/react";
+import { useRouter } from "next/navigation";
 
-export default function LocaleSwitcher() {
+interface LocaleSwitcherProps {
+  classes?: string;
+}
+
+const LocaleSwitcher = ({ classes }: LocaleSwitcherProps) => {
   const pathName = usePathname()
+  const router = useRouter();
 
   const redirectedPathName = (locale: string) => {
     if (!pathName) return "/"
     const segments = pathName.split("/")
     segments[1] = locale
-    return segments.join("/")
+    router.push( segments.join("/"));
   }
 
   return (
-    <>
-      <ul className="flex gap-x-3 text-sm">
-        {supportedLanguages.map(locale => {
-          return (
-            <li key={locale}>
-              <Link
-                href={redirectedPathName(locale)}
-                className="rounded-md border bg-black px-3 py-2 text-white"
-              >
-                {locale} {humanReadableLanguage(locale)}
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
-    </>
+     <div className={classes}>
+         <Select label="Language">
+            {supportedLanguages.map(locale => 
+             <Option
+                key={locale} 
+                onClick={() => redirectedPathName(locale)}
+                >
+              {locale} - {humanReadableLanguage(locale)}
+            </Option>)
+          }
+        </Select>
+     </div>
   )
 }
+
+export default LocaleSwitcher;

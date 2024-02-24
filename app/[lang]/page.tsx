@@ -13,7 +13,7 @@ export default async function Home({
   const { page } = await getDictionary(lang)
 
   return (
-    <div className="mt-0 w-ull max-h-screen overflow-scroll">
+    <div className="mt-0 w-full max-h-screen overflow-scroll">
       {/* <Header lang={lang} /> */}
       {/* <NavBar lang={lang} /> */}
       <StickyNavbar/>
