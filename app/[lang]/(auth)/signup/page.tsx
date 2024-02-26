@@ -23,7 +23,7 @@ const SignUp = () =>{
       <Card className="w-96 my-10 rounded-none">
         <CardHeader
           variant="filled"
-          className="mb-4 grid h-24 place-items-center bg-primary-500 "
+          className="mb-4 grid h-20 place-items-center bg-purple-500 rounded-md"
         >
           <Typography variant="h3" color="white">
             Sign Up
@@ -34,7 +34,7 @@ const SignUp = () =>{
           <Input label="Password" size="lg" />
         </CardBody>
         <CardFooter className="pt-0">
-          <Button variant="filled" fullWidth className="bg-dark-500">
+          <Button variant="filled" fullWidth className="bg-primary-500">
             Register
           </Button>
           <Typography variant="small" className="mt-6 text-justify text-light400_light500">

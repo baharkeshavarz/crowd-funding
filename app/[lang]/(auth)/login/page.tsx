@@ -17,12 +17,13 @@ import { usePathname } from "next/navigation";
 const Login = () =>{
   const pathname= usePathname();
   const lang = findLocalFromUrl(pathname);
+  
   return (
     <LayoutWrapper>
       <Card className="w-96 my-10 rounded-none">
         <CardHeader
           variant="filled"
-          className="mb-4 grid h-24 place-items-center bg-primary-500"
+          className="mb-4 grid h-20 place-items-center bg-purple-500 rounded-md"
         >
           <Typography variant="h3" color="white">
             Sign In
@@ -36,7 +37,7 @@ const Login = () =>{
           </div>
         </CardBody>
         <CardFooter className="pt-0">
-          <Button variant="filled" fullWidth className="bg-dark-500">
+          <Button variant="filled" fullWidth className="bg-primary-500">
             Sign In
           </Button>
           <Typography variant="small" className="mt-6 flex justify-center text-light400_light500">

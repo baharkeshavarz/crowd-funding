@@ -30,7 +30,7 @@ const NavBar = ( {lang, navigation }: NavbarProps) => {
  
  
   return (
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
+      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 shadow-light100_dark100">
         <div className="flex-between items-center max-w-6xl mx-auto text-blue-gray-900">
           <Logo/>
           <div className="mr-4 hidden lg:block lg:flex-start">

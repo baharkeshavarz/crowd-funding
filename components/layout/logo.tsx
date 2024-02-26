@@ -1,5 +1,8 @@
+"use client"
 import Image from "next/image"
-import React from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { findLocalFromUrl } from "@/lib/url"
 
 interface LogoProps {
   name?: string
@@ -7,15 +10,17 @@ interface LogoProps {
 }
 
 const Logo = ({ name = "logo.png", classes="w-24 h-12" }: LogoProps) => {
+  const pathname= usePathname();
+  const lang = findLocalFromUrl(pathname);
   return (
-    <div className={`relative ${classes}`}>
+    <Link className={`relative ${classes}`} href={`/${lang}/`}>
       <Image
         src={`/assets/images/${name}`}
         alt=""
         fill={true}
         className="object-contain"
       />
-    </div>
+    </Link>
   )
 }
 

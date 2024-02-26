@@ -4,10 +4,10 @@ import { supportedLanguages } from "@/i18n.config"
 import { Locale } from "@/constants/languages"
 import { Roboto } from "next/font/google"
 import { Noto_Sans_Arabic } from "next/font/google"
-import Image from "next/image"
 import { getDictionary } from "@/lib/locale"
 import NavBar from "@/components/layout/nav/navbar"
 import Footer from "@/components/footer"
+import BreadcrumbsComponent from "@/components/layout/breadcrumbs"
 
 // Handle the font family
 const roboto = Roboto({
@@ -56,6 +56,7 @@ export default async function RootLayout({
       >
         <main>
            <NavBar lang={params.lang} navigation={navigation}/>
+           <BreadcrumbsComponent/>
            {children}
            <Footer />
           </main>

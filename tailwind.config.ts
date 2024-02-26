@@ -37,19 +37,18 @@ const config: Config = withMT({
           500: "#7B8EC8",
           400: "#858EAD"
         },
-        sky: {
-          50: "#f0f9ff",
-          100: "#e0f2fe",
-          200: "#bae6fd",
-          300: "#7dd3fc",
-          400: "#38bdf8",
-          500: "#0ea5e9",
-          600: "#0284c7",
-          700: "#0369a1",
-          800: "#075985",
-          900: "#0c4a6e",
+        purple: {
+          50: "#f3e5f5",
+          100: "#e1bee7",
+          200: "#ce93d8",
+          300: "#ba68c8",
+          400: "#ab47bc",
+          500: "#674df0",
+          600: "#8e24aa",
+          700: "#7b1fa2",
+          800: "#6a1b9a",
+          900: "#6f2dbd",
         },
-        "accent-blue": "#1DA1F2"
       },
       fontFamily: {
         roboto: ["var(--font-roboto)"],
