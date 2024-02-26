@@ -44,7 +44,7 @@ export default function RootLayout({
     >
       <body
         className={
-          params.lang.toString() === "ar"
+            params.lang.toString() === "ar"
             ? noto_arabic.className
             : roboto.className
         }

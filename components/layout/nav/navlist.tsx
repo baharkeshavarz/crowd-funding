@@ -1,11 +1,8 @@
 import Link from "next/link"
-import { getDictionary } from "@/lib/locale"
 import { Locale } from "@/constants/languages"
 import { Typography } from "@material-tailwind/react"
 
-export default async function NavList({ lang }: { lang: Locale }) {
-  const { navigation } = await getDictionary(lang)
-
+export default function NavList({ lang, navigation }: { lang: Locale, navigation: any }) {
   return (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:gap-6 lg:mx-3 w-full">
       <Typography

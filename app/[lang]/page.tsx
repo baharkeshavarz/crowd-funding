@@ -1,16 +1,20 @@
 import { Locale } from "@/i18n.config"
 import Sliders from "@/components/layout/sliders"
 import Footer from "@/components/footer"
-import StickyNavbar from "@/components/layout/nav/sticky-navbar"
+import { getDictionary } from "@/lib/locale"
+import NavBar from "@/components/layout/nav/navbar"
 
-export default function Home({
+const Home = async({
   params: { lang }
 }: {
   params: { lang: Locale }
-}) {
+}) => {
+ 
+  const { navigation } = await getDictionary(lang);
+
   return (
     <div className="mt-0 w-full max-h-screen overflow-scroll">
-      <StickyNavbar lang={lang}/>
+      <NavBar lang={lang} navigation={navigation}/>
       <Sliders />
       <div className="h-96">
          data
@@ -19,3 +23,5 @@ export default function Home({
     </div>
   )
 }
+
+export default Home;

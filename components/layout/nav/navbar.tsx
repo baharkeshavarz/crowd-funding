@@ -14,9 +14,10 @@ import NavList from "./navlist";
  
 interface NavbarProps {
   lang: Locale;
+  navigation: any;
 }
 
-const NavBar = ( {lang }: NavbarProps) => {
+const NavBar = ( {lang, navigation }: NavbarProps) => {
   const [openNav, setOpenNav] = useState(false);
  
   useEffect(() => {
@@ -30,9 +31,9 @@ const NavBar = ( {lang }: NavbarProps) => {
   return (
       <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
         <div className="flex-between items-center max-w-6xl mx-auto text-blue-gray-900">
-          <Logo name="logo.png"/>
+          <Logo/>
           <div className="mr-4 hidden lg:block lg:flex-start">
-            <NavList lang={lang} />
+             <NavList lang={lang} navigation={navigation}/>
             <div className="flex-center gap-x-2 mr-1">
               <Button
                 variant="filled"
@@ -92,7 +93,7 @@ const NavBar = ( {lang }: NavbarProps) => {
         <Collapse open={openNav}>     
         <div className="flex-start flex-col gap-1">
           <LocaleSwitcher classes="w-full mt-2"/>
-          <NavList lang={lang} />
+          <NavList lang={lang} navigation={navigation}/>
           <div className="flex-center w-full gap-1">
              <Button fullWidth variant="filled" size="sm">
               <span>Log In</span>

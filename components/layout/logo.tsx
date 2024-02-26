@@ -2,7 +2,7 @@ import Image from "next/image"
 import React from "react"
 
 interface LogoProps {
-  name: string
+  name?: string
   classes?: string
 }
 
