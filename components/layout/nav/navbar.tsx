@@ -39,7 +39,7 @@ const NavBar = ( {lang, navigation }: NavbarProps) => {
               <Button
                 variant="filled"
                 size="sm"
-                className="hidden lg:inline-block w-24"
+                className="hidden lg:inline-block min-w-[8rem] bg-dark-500"
               >
                 <Link href={`/${lang}/login`}>{navigation.login}</Link>
               </Button>

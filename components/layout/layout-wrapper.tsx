@@ -6,7 +6,7 @@ interface LayoutWrapperProps {
 
 const LayoutWrapper = ({children}: LayoutWrapperProps) => {
   return (
-    <div className="max-w-6xl flex mx-auto">
+    <div className="max-w-6xl flex-center my-5 mx-auto">
         {children}      
     </div>
   )

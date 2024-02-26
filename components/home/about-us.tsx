@@ -39,7 +39,7 @@ const HomeAbout = () => {
 
           <div className="flex-start gap-5 py-10">
             <div className="background-light850_dark100 p-4 transition-opacity hover:opacity-70 rounded-full">
-               <HiMiniCheckCircle size={34} />
+               <HiMiniCheckCircle size={32} />
             </div>
             <div>
                 <p className="text-dark100_light900 h3-bold">Highest Success Rates </p>
@@ -49,7 +49,7 @@ const HomeAbout = () => {
 
           <div className="flex-start gap-5 py-10">
             <div className="background-light850_dark100 p-4 transition-opacity hover:opacity-70 rounded-full">
-               <HiMiniCheckCircle size={34} />
+               <HiMiniCheckCircle size={32} />
             </div>
             <div>
                 <p className="text-dark100_light900 h3-bold">Millions in Funding </p>
