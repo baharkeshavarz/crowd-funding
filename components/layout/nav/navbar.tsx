@@ -11,6 +11,7 @@ import Logo from "../logo";
 import LocaleSwitcher from "../locale-switcher";
 import { Locale } from "@/i18n.config";
 import NavList from "./navlist";
+import Link from "next/link";
  
 interface NavbarProps {
   lang: Locale;
@@ -40,14 +41,7 @@ const NavBar = ( {lang, navigation }: NavbarProps) => {
                 size="sm"
                 className="hidden lg:inline-block w-24"
               >
-                <span>Log In</span>
-              </Button>
-              <Button
-                variant="filled"
-                size="sm"
-                className="hidden lg:inline-block w-24"
-              >
-                <span>Sign in</span>
+                <Link href={`/${lang}/login`}>{navigation.login}</Link>
               </Button>
             </div>
             <LocaleSwitcher/>

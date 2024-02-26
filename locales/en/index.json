@@ -3,16 +3,16 @@
     "home": "Home",
     "events": "Events",
     "about": "About Us",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "login": "Log In"
   },
   "page": {
     "home": {
-      "title": "Welcome to NextJs i18n",
-      "description": "Internationalization in NextJs 13 App router"
+      "title": "Learn About Our Companyre",
+      "description": "There are many variations of passages of available but the majority have suffered alteration in some form, by injected humou or randomised words."
     },
     "about": {
-      "title": "About Us",
-      "description": "This is the about page"
-    }
+      "title": "About Our Company",
+      "description": "Welcome to our company, where innovation meets excellence. We are a dynamic and forward-thinking technology company committed to providing smart solutions for businesses. Our team of experts is dedicated to pushing boundaries and creating impactful technological solutions that drive success. Welcome to our company, where innovation meets excellence. We are a dynamic and forward-thinking technology company committed to providing smart solutions for businesses. Our team of experts is dedicated to pushing boundaries and creating impactful technological solutions that drive success. Welcome to our company, where innovation meets excellence. We are a dynamic and forward-thinking technology company committed to providing smart solutions for businesses. Our team of experts is dedicated to pushing boundaries and creating impactful technological solutions that drive success."    }
   }
 }

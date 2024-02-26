@@ -5,6 +5,9 @@ import { Locale } from "@/constants/languages"
 import { Roboto } from "next/font/google"
 import { Noto_Sans_Arabic } from "next/font/google"
 import Image from "next/image"
+import { getDictionary } from "@/lib/locale"
+import NavBar from "@/components/layout/nav/navbar"
+import Footer from "@/components/footer"
 
 // Handle the font family
 const roboto = Roboto({
@@ -30,13 +33,15 @@ export async function generateStaticParams() {
   return supportedLanguages.map(locale => ({ lang: locale }))
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params
 }: {
   children: React.ReactNode
   params: { lang: Locale }
 }) {
+
+  const { navigation } = await getDictionary(params.lang);
   return (
     <html
       lang={params.lang.toString()}
@@ -49,7 +54,11 @@ export default function RootLayout({
             : roboto.className
         }
       >
-        <main>{children}</main>
+        <main>
+           <NavBar lang={params.lang} navigation={navigation}/>
+           {children}
+           <Footer />
+          </main>
       </body>
     </html>
   )
