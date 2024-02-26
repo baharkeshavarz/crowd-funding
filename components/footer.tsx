@@ -22,7 +22,7 @@ const currentYear = new Date().getFullYear();
  
 const Footer = () => {
   return (
-    <footer className="relative py-20 w-full bg-dark-500 bg-footer-back m-0 bg-right bg-no-repeat sm:bg-[length:500px_600px] lg:bg-[length:880px_600px]">
+    <footer className="relative py-20 w-full bg-dark-500 bg-[url('/assets/images/footer-bg.png')] sm:bg-right bg-no-repeat">
       <div className="mx-auto w-full max-w-6xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <div className="flex flex-col">

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "Crowd Funding App",
   description: "Crowd Funding App",
   icons: {
-    icon: "/assets/images/site-logo.svg"
+    icon: "/assets/images/logo.png"
   }
 }
 

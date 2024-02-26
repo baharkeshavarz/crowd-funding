@@ -19,7 +19,7 @@ const config: Config = withMT({
     extend: {
       colors: {
         primary: {
-          500: "#674df0",
+          500: "#32d2a4",
           100: "#FFF1E6"
         },
         dark: {
@@ -53,7 +53,6 @@ const config: Config = withMT({
       }
     },
     backgroundImage: {
-      "footer-back": "url('/assets/images/footer-bg.png)"
     },
     screens: {
       sm: "576px",
