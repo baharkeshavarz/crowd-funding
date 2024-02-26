@@ -3,6 +3,7 @@ import Sliders from "@/components/layout/sliders"
 import Footer from "@/components/footer"
 import { getDictionary } from "@/lib/locale"
 import NavBar from "@/components/layout/nav/navbar"
+import HomeAbout from "@/components/home/about-us"
 
 const Home = async({
   params: { lang }
@@ -16,9 +17,7 @@ const Home = async({
     <div className="mt-0 w-full max-h-screen overflow-scroll">
       <NavBar lang={lang} navigation={navigation}/>
       <Sliders />
-      <div className="h-96">
-         data
-      </div>
+      <HomeAbout/>
       <Footer />
     </div>
   )

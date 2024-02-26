@@ -6,7 +6,6 @@
   /* ---------------- */
   /* background color */
   /* ---------------- */
-
   .background-light850_dark100 {
     @apply bg-light-850 dark:bg-dark-100;
   }
@@ -17,10 +16,6 @@
 
   .background-light900_dark300 {
     @apply bg-light-900 dark:bg-dark-300;
-  }
-
-  .background-light800_darkgradient {
-    @apply dark:dark-gradient bg-light-800;
   }
 
   .background-light800_dark400 {
@@ -149,7 +144,7 @@
   }
 
   .paragraph-medium {
-    @apply text-[166px] font-medium leading-[22.4px];
+    @apply text-[16px] font-medium leading-[22.4px];
   }
 
   .paragraph-semibold {

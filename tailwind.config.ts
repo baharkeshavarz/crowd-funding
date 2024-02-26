@@ -32,7 +32,7 @@ const config: Config = withMT({
         light: {
           900: "#FFFFFF",
           800: "#F4F6F8",
-          850: "#FDFDFD",
+          850: "#f7f6f2",
           700: "#DCE3F1",
           500: "#7B8EC8",
           400: "#858EAD"
