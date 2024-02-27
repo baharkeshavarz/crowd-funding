@@ -1,10 +1,10 @@
 import { Locale } from "@/i18n.config"
 import Footer from "@/components/footer"
 import { getDictionary } from "@/lib/locale"
-import NavBar from "@/components/layout/nav/navbar"
+import NavBar from "@/components/layout/navbar"
 import HomeAbout from "@/components/home/about-us"
 import CarouselWithContent from "@/components/layout/carousel"
-import NavbarWithMegaMenu from "@/components/layout/nav/navbar"
+import NavbarWithMegaMenu from "@/components/layout/navbar"
 
 const Home = async({
   params: { lang },

@@ -31,10 +31,10 @@ import {
   TagIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
-import Logo from "../logo";
+import Logo from "./logo";
 import Link from "next/link";
 import { Locale } from "@/i18n.config";
-import LocaleSwitcher from "../locale-switcher";
+import LocaleSwitcher from "./locale-switcher";
 import { createElement, useEffect, useState } from "react";
 
 interface NavbarProps {

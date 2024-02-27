@@ -43,6 +43,7 @@ export default async function RootLayout({
       dir={params.lang.toString() === "ar" ? "rtl" : "ltr"}
     >
       <body
+        dir={params.lang.toString() === "ar" ? "rtl" : "ltr"}
         className={
             params.lang.toString() === "ar"
             ? noto_arabic.className

@@ -1,5 +1,5 @@
 import BreadcrumbsComponent from "@/components/layout/breadcrumbs"
-import NavbarWithMegaMenu from "@/components/layout/nav/navbar"
+import NavbarWithMegaMenu from "@/components/layout/navbar"
 import { getDictionary } from "@/lib/locale"
 import { Locale } from "@/i18n.config"
 import Footer from "@/components/footer"
