@@ -21,14 +21,14 @@ const SignUp = () =>{
   return (
     <LayoutWrapper>
       <Card className="w-96 my-10 rounded-none">
-        <CardHeader
+        {/* <CardHeader
           variant="filled"
           className="mb-4 grid h-20 place-items-center bg-purple-500 rounded-md"
         >
           <Typography variant="h3" color="white">
             Sign Up
           </Typography>
-        </CardHeader>
+        </CardHeader> */}
         <CardBody className="flex flex-col gap-4">
           <Input label="Email" size="lg" />
           <Input label="Password" size="lg" />
@@ -37,7 +37,7 @@ const SignUp = () =>{
           <Button variant="filled" fullWidth className="bg-primary-500">
             Register
           </Button>
-          <Typography variant="small" className="mt-6 text-justify text-light400_light500">
+          {/* <Typography variant="small" className="mt-6 text-justify text-light400_light500">
             Your personal data will be used to support your experience throughout this website, to manage access to your account, and for 
             other purposes described in our
             <Link
@@ -46,7 +46,7 @@ const SignUp = () =>{
             >
              privacy policy
             </Link>
-          </Typography>
+          </Typography> */}
           <Typography variant="small" className="mt-6 flex justify-center text-light400_light500">
             Do you have an account?
             <Typography

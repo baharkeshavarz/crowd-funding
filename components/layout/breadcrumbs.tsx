@@ -9,9 +9,12 @@ const BreadcrumbsComponent = () => {
   return (
     <div className="bg-light-850 h-16">
         <div className="max-w-6xl flex-between mx-auto h-full">
-            <div className="flex-start divide-x divide-black space-x-2">
+            <div className="flex-start space-x-2">
               <h1 className="text-dark400_light800 paragraph-regular">Log In</h1>
-              <span className="px-5 text-light400_light500 small-regular">
+              <div className="relative px-2">
+                 <span className="border-r border-black"></span>
+              </div>
+              <span className="px-4 text-light400_light500 small-regular">
                   Short tagline goes here
               </span>
             </div>

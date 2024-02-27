@@ -21,14 +21,14 @@ const Login = () =>{
   return (
     <LayoutWrapper>
       <Card className="w-96 my-10 rounded-none">
-        <CardHeader
+        {/* <CardHeader
           variant="filled"
           className="mb-4 grid h-20 place-items-center bg-purple-500 rounded-md"
         >
           <Typography variant="h3" color="white">
             Sign In
           </Typography>
-        </CardHeader>
+        </CardHeader> */}
         <CardBody className="flex flex-col gap-4">
           <Input label="Email" size="lg" />
           <Input label="Password" size="lg" />
