@@ -7,9 +7,9 @@ import Link from 'next/link';
 
 const BreadcrumbsComponent = () => {
   return (
-    <div className="bg-light-850 h-16">
-        <div className="max-w-6xl flex-between mx-auto h-full">
-            <div className="flex-start space-x-2">
+    <div className="bg-light-850 sm:h-16">
+        <div className="max-w-6xl sm:flex-between mx-auto h-full p-2">
+            <div className="flex-start flex-1 gap-2">
               <h1 className="text-dark400_light800 paragraph-regular">Log In</h1>
               <div className="relative px-2">
                  <span className="border-r border-black"></span>
@@ -18,18 +18,21 @@ const BreadcrumbsComponent = () => {
                   Short tagline goes here
               </span>
             </div>
-            <Breadcrumbs
-                 separator="." 
-                  className="bg-gradient-to-tr from-gray-900 to-gray-800 p-5"
-              >
-                    <Link href="#" className="opacity-60">
-                       Home
-                    </Link>
-                    <Link href="#" className="opacity-60">
-                        Pages
-                    </Link>
-                    <Link href="#">Login</Link>
-            </Breadcrumbs>
+            <div className="sm:flex-end flex-start flex-1">
+              <Breadcrumbs
+                  separator="." 
+                    className="bg-gradient-to-tr from-gray-900 to-gray-800 p-2 mt-2"
+                >
+                      <Link href="#" className="opacity-60">
+                        Home
+                      </Link>
+                      <Link href="#" className="opacity-60">
+                          Pages
+                      </Link>
+                      <Link href="#">Login</Link>
+              </Breadcrumbs>
+            </div>
+           
         </div>
      </div>
   )

@@ -5,7 +5,7 @@ import { Locale } from "@/constants/languages"
 import { Roboto } from "next/font/google"
 import { Noto_Sans_Arabic } from "next/font/google"
 import { getDictionary } from "@/lib/locale"
-import NavBar from "@/components/layout/nav/navbar"
+import  NavbarWithMegaMenu from "@/components/layout/nav/navbar"
 import Footer from "@/components/footer"
 import BreadcrumbsComponent from "@/components/layout/breadcrumbs"
 
@@ -55,7 +55,7 @@ export default async function RootLayout({
         }
       >
         <main>
-           <NavBar lang={params.lang} navigation={navigation}/>
+           <NavbarWithMegaMenu lang={params.lang} navigation={navigation}/>
            <BreadcrumbsComponent/>
            {children}
            <Footer />

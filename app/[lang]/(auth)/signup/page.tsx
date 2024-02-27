@@ -20,7 +20,7 @@ const SignUp = () =>{
   const lang = findLocalFromUrl(pathname);
   return (
     <LayoutWrapper>
-      <Card className="w-96 my-10 rounded-none">
+      <Card className="sm:w-96 w-full my-10 py-5 rounded-none sm:mx-0 mx-5">
         {/* <CardHeader
           variant="filled"
           className="mb-4 grid h-20 place-items-center bg-purple-500 rounded-md"
