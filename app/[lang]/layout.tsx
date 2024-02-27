@@ -4,10 +4,6 @@ import { supportedLanguages } from "@/i18n.config"
 import { Locale } from "@/constants/languages"
 import { Roboto } from "next/font/google"
 import { Noto_Sans_Arabic } from "next/font/google"
-import { getDictionary } from "@/lib/locale"
-import  NavbarWithMegaMenu from "@/components/layout/nav/navbar"
-import Footer from "@/components/footer"
-import BreadcrumbsComponent from "@/components/layout/breadcrumbs"
 
 // Handle the font family
 const roboto = Roboto({
@@ -41,7 +37,6 @@ export default async function RootLayout({
   params: { lang: Locale }
 }) {
 
-  const { navigation } = await getDictionary(params.lang);
   return (
     <html
       lang={params.lang.toString()}
@@ -55,11 +50,8 @@ export default async function RootLayout({
         }
       >
         <main>
-           <NavbarWithMegaMenu lang={params.lang} navigation={navigation}/>
-           <BreadcrumbsComponent/>
            {children}
-           <Footer />
-          </main>
+         </main>
       </body>
     </html>
   )
