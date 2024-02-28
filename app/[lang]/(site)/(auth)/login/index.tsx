@@ -4,7 +4,7 @@ import TextInput from "@/components/forms/input";
 import LayoutWrapper from "@/components/layout/layout-wrapper";
 import { findLocalFromUrl } from "@/lib/url";
 import { TranslateProps } from "@/types";
-import { LockClosedIcon, UserCircleIcon } from "@heroicons/react/24/outline";
+import { LockClosedIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import {
   Card,
   CardBody,

@@ -144,7 +144,7 @@ export function SidebarWithSearch() {
         </ListItem>
         <ListItem>
           <ListItemPrefix>
-            <PowerIcon className="h-5 w-5" />
+            <PowerIcon className="h-5 w-5 text-red-500" />
           </ListItemPrefix>
           Log Out
         </ListItem>
