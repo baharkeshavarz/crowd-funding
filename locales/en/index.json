@@ -6,10 +6,25 @@
     "contact": "Contact Us",
     "login": "Log In"
   },
-  "page": {
+  "pages": {
     "home": {
       "title": "Learn About Our Companyre",
       "description": "There are many variations of passages of available but the majority have suffered alteration in some form, by injected humou or randomised words."
+    },
+    "general" : {
+      "login": "Log In",
+      "register": "register"
+    },
+    "login": {
+      "username": "Username",
+      "password": "Password",
+      "rememberMe": "Remember Me",
+      "dontHaveAccount": "Don't have an account?"
+    },
+    "signup": {
+      "username": "Username",
+      "password": "Password",
+      "haveAccount": "Do you have an account?"
     },
     "about": {
       "title": "About Our Company",

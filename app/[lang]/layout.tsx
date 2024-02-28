@@ -1,9 +1,10 @@
 import "./globals.css"
 import type { Metadata } from "next"
 import { supportedLanguages } from "@/i18n.config"
-import { Locale } from "@/constants/languages"
 import { Roboto } from "next/font/google"
 import { Noto_Sans_Arabic } from "next/font/google"
+import AppThemeProvider from "@/providers/theme-provider"
+import { ChildrenLocalProps } from "@/types"
 
 // Handle the font family
 const roboto = Roboto({
@@ -32,10 +33,7 @@ export async function generateStaticParams() {
 export default async function RootLayout({
   children,
   params
-}: {
-  children: React.ReactNode
-  params: { lang: Locale }
-}) {
+}: ChildrenLocalProps) {
 
   return (
     <html
@@ -51,7 +49,7 @@ export default async function RootLayout({
         }
       >
         <main>
-           {children}
+             {children}
          </main>
       </body>
     </html>

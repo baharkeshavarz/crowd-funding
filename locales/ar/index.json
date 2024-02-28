@@ -5,12 +5,26 @@
     "events": "رویدادها",
     "contact": "اتصال",
     "login": "تسجيل الدخول"
-
   },
-  "page": {
+  "pages": {
     "home": {
       "title": "خوش آمدید",
       "description": "این پروژه است"
+    },
+    "general": {
+       "login": "تسجيل الدخول",
+       "register": "يسجل"
+    },
+    "login": {
+      "username": "اسم المستخدم",
+      "password": "كلمة المرور",
+      "rememberMe": "تذكرنى",
+      "dontHaveAccount": "ليس لديك حساب؟"
+    },
+    "signup": {
+      "username": "اسم المستخدم",
+      "password": "كلمة المرور",
+      "haveAccount": "هل لديك حساب؟"
     },
     "about": {
       "title": "معلومات عنا",

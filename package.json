@@ -34,8 +34,8 @@
   "devDependencies": {
     "@types/negotiator": "^0.6.1",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^18.2.60",
+    "@types/react-dom": "^18.2.19",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.4.1",
     "server-only": "^0.0.1"
