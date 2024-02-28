@@ -11,6 +11,22 @@
       "title": "Willkommen bei NextJs i18n",
       "description": "Internationalisierung im NextJs 13 App-Router"
     },
+    "general" : {
+      "login": "Log In",
+      "register": "register",
+      "language": "Language"
+    },
+    "login": {
+      "username": "Username",
+      "password": "Password",
+      "rememberMe": "Remember Me",
+      "dontHaveAccount": "Don't have an account?"
+    },
+    "signup": {
+      "username": "Username",
+      "password": "Password",
+      "haveAccount": "Do you have an account?"
+    },
     "about": {
       "title": "Über uns",
       "description": "Dies ist die About-Seite"

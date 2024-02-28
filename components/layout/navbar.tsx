@@ -39,7 +39,7 @@ import { createElement, useEffect, useState } from "react";
 
 interface NavbarProps {
   lang: Locale;
-  navigation: any;
+  t: any;
 }
  
 const navListMenuItems = [
@@ -169,21 +169,21 @@ const NavListMenu = () => {
   );
 }
  
-const NavList = ({lang, navigation }: NavbarProps) => {
+const NavList = ({ lang, t }: NavbarProps) => {
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1 w-full flex-center">
       <ListItem className="min-w-fit">
-         <Link href={`/${lang}/login`}>{navigation.home}</Link>
+         <Link href={`/${lang}/login`}>{t.navigation.home}</Link>
        </ListItem>
       <NavListMenu />
       <ListItem className="min-w-fit">
-         <Link href={`/${lang}/contact`}>{navigation.contact}</Link>
+         <Link href={`/${lang}/contact`}>{t.navigation.contact}</Link>
       </ListItem>
     </List>
   );
 }
  
-const NavbarWithMegaMenu = ({lang, navigation }: NavbarProps) => {
+const NavbarWithMegaMenu = ({lang, t }: NavbarProps) => {
   const [openNav, setOpenNav] = useState(false);
  
   useEffect(() => {
@@ -198,17 +198,17 @@ const NavbarWithMegaMenu = ({lang, navigation }: NavbarProps) => {
         <div className="flex-between items-center max-w-6xl mx-auto text-blue-gray-900">
           <Logo/>
           <div className="mr-4 hidden lg:block lg:flex-start">
-             <NavList lang={lang} navigation={navigation}/>
+             <NavList lang={lang} t={t}/>
              <div className="flex-center gap-x-2 mr-1">
               <Button
                 variant="filled"
                 size="sm"
                 className="hidden lg:inline-block min-w-[8rem] bg-dark-500"
               >
-                <Link href={`/${lang}/login`}>{navigation.login}</Link>
+                <Link href={`/${lang}/login`}>{t.navigation.login}</Link>
               </Button>
             </div>
-            <LocaleSwitcher/>
+            <LocaleSwitcher t={t}/>
           </div>
 
         <IconButton
@@ -225,14 +225,14 @@ const NavbarWithMegaMenu = ({lang, navigation }: NavbarProps) => {
         </IconButton>
       </div>
       <Collapse open={openNav}>
-        <LocaleSwitcher/>
-        <NavList lang={lang} navigation={navigation} />
+        <LocaleSwitcher t={t}/>
+        <NavList lang={lang} t={t} />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
           <Button variant="filled" size="sm" fullWidth>
-            Log In
+             <Link href={`/${lang}/login`}>{t.pages.general.login}</Link>
           </Button>
           <Button variant="filled" size="sm" fullWidth>
-            Sign In
+            <Link href={`/${lang}/signup`}>{t.pages.general.register}</Link>
           </Button>
         </div>
       </Collapse>

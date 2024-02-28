@@ -9,10 +9,10 @@ const Home = async({
   params: { lang },
 }: LocalProps) => {
 
-  const { navigation } = await getDictionary(lang);
+  const translation = await getDictionary(lang);
   return (
     <div className="mt-0 w-full max-h-screen overflow-scroll">
-        <NavbarWithMegaMenu lang={lang} navigation={navigation}/>
+        <NavbarWithMegaMenu lang={lang} t={translation}/>
         <CarouselWithContent />
         <HomeAbout/>
         <Footer />

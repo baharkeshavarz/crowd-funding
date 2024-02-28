@@ -13,7 +13,8 @@
     },
     "general" : {
       "login": "Log In",
-      "register": "register"
+      "register": "register",
+      "language": "Language"
     },
     "login": {
       "username": "Username",

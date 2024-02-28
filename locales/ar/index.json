@@ -13,7 +13,8 @@
     },
     "general": {
        "login": "تسجيل الدخول",
-       "register": "يسجل"
+       "register": "يسجل",
+       "language": "لغة"
     },
     "login": {
       "username": "اسم المستخدم",
