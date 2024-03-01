@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss"
 
-const withMT = require("@material-tailwind/react/utils/withMT");
+const withMT = require("@material-tailwind/react/utils/withMT")
 
 const config: Config = withMT({
   content: [
@@ -23,6 +23,18 @@ const config: Config = withMT({
           500: "#32d2a4",
           100: "#FFF1E6"
         },
+        secondary: {
+          50: "#f3e5f5",
+          100: "#e1bee7",
+          200: "#ce93d8",
+          300: "#ba68c8",
+          400: "#ab47bc",
+          500: "#674df0",
+          600: "#8e24aa",
+          700: "#7b1fa2",
+          800: "#6a1b9a",
+          900: "#6f2dbd"
+        },
         dark: {
           100: "#000000",
           200: "#0F1117",
@@ -33,23 +45,11 @@ const config: Config = withMT({
         light: {
           900: "#FFFFFF",
           800: "#F4F6F8",
-          850: "#f7f6f2",
+          850: "#f7f7f7",
           700: "#DCE3F1",
           500: "#7B8EC8",
           400: "#858EAD"
-        },
-        purple: {
-          50: "#f3e5f5",
-          100: "#e1bee7",
-          200: "#ce93d8",
-          300: "#ba68c8",
-          400: "#ab47bc",
-          500: "#674df0",
-          600: "#8e24aa",
-          700: "#7b1fa2",
-          800: "#6a1b9a",
-          900: "#6f2dbd",
-        },
+        }
       },
       fontFamily: {
         roboto: ["var(--font-roboto)"],
@@ -64,8 +64,7 @@ const config: Config = withMT({
         "dark-200": "2px 0px 20px 0px rgba(39, 36, 36, 0.04)"
       }
     },
-    backgroundImage: {
-    },
+    backgroundImage: {},
     screens: {
       sm: "576px",
       // => @media (min-width: 576px) { ... }
@@ -77,14 +76,14 @@ const config: Config = withMT({
       // => @media (min-width: 1200px) { ... }
     },
     keyframes: {
-      "accordion-down": {
-        from: { height: "0" },
-        to: { height: "var(--radix-accordion-content-height)" }
-      },
-      "accordion-up": {
-        from: { height: "var(--radix-accordion-content-height)" },
-        to: { height: "0" }
-      }
+      // "accordion-down": {
+      //   from: { height: "0" },
+      //   to: { height: "var(--radix-accordion-content-height)" }
+      // },
+      // "accordion-up": {
+      //   from: { height: "var(--radix-accordion-content-height)" },
+      //   to: { height: "0" }
+      // }
     },
     animation: {
       "accordion-down": "accordion-down 0.2s ease-out",
@@ -92,6 +91,6 @@ const config: Config = withMT({
     }
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")]
-});
+})
 
 export default config
